@@ -6,17 +6,28 @@ class task:
         self.tag = tag
         self.complete = complete
 
+    def __repr__(self):
+        
+        status = "Completado" if self.complete else "En espera"
+        return f'Estatus de la tarea {status} | Prioridad: {self.priority}| Tarea : {self.name} ({self.tag})  '
+
     def mark_as_completed(self):
         self.complete = True
-        print(f"Ejercicio {self.name} completado")
-    
-    def to_dictionary():
-        pass
+
+        
+    def to_dictionary(self):
+        task_properties = {
+            "name": self.name,
+            "priority": self.priority,
+            "tag": self.tag,
+            "complete" : self.complete
+        }
+
+        return task_properties
 
 
 #Objeto de prueba
 
 pierna = task("Cuadri",4,"Pierna")
 
-pierna.task_is_complete()
-        
+print(pierna)
