@@ -6,6 +6,8 @@ class task:
         self.tag = tag
         self.complete = complete
 
+
+    #Dar un reporte de como esta el estatus de la tarea
     def __repr__(self):
         
         status = "Completado" if self.complete else "En espera"
@@ -30,4 +32,6 @@ class task:
 
 pierna = task("Cuadri",4,"Pierna")
 
+print(pierna)
+pierna.mark_as_completed()
 print(pierna)
