@@ -30,8 +30,8 @@ class task:
 
 #Objeto de prueba
 
-pierna = task("Cuadri",4,"Pierna")
+# pierna = task("Cuadri",4,"Pierna")
 
-print(pierna)
-pierna.mark_as_completed()
-print(pierna)
+# print(pierna)
+# pierna.mark_as_completed()
+# print(pierna)
