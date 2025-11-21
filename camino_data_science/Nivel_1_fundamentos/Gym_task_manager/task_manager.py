@@ -27,7 +27,7 @@ class task_manager:
                 json.dump(data, f, indent=4)
                 print(f"{len(self.tasks)} tarea(s) guardada() en {self.file_path}")
         except Exception as e:
-            print("No se fue capaz de guardar los datos de las tareas Error: {e}")    
+            print(f"No se fue capaz de guardar los datos de las tareas Error: {e}")    
 
 
     def load_tasks(self):
@@ -65,11 +65,11 @@ t1 = task("Cuadri", 4, "Pierna")
 # 1. Añadir la tarea a la lista en memoria
 manager.add_task(t1) 
 
-# 2. Guardar la lista interna (Crea tasks.json)
+# # 2. Guardar la lista interna (Crea tasks.json)
 manager.save_tasks() 
 
-# 3. Prueba de Deserialización: Crea una NUEVA instancia
-manager_nuevo = task_manager(FILE_PATH)
+# # 3. Prueba de Deserialización: Crea una NUEVA instancia
+# manager_nuevo = task_manager(FILE_PATH)
 
 # 4. Verificar que se cargó:
-print(f"Cargadas {len(manager_nuevo.tasks)} tareas. Tarea 1: {manager_nuevo.tasks[0]}")
+print(f"Cargadas {len(manager.tasks)} tareas. Tarea 1: {manager.tasks[0]}")
