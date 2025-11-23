@@ -18,8 +18,28 @@ def main():
               
               """)
         
-
-
+        match selection:
+            case "1":
+                #Agregar tarea
+                pass
+            case "2":
+                #Listar tareas 
+                print("---------Tareas listadas ----------")
+                if manager.tasks:
+                  for idx, task_obj in enumerate(manager.tasks):
+                        print(f"{idx + 1}.- {task_obj}")                
+                else:
+                     print("No hay tareas guardadas ¡Añande una!")
+            case "3":
+                #Marcar como completada
+                pass
+            case "4":
+                manager.save_tasks()
+                print("Tareas guardadas")
+                print("Saliendo del programa....")
+                break
+            case _:
+                print("Comando no valido")
 
 if __name__ == "__main__":
     main()
