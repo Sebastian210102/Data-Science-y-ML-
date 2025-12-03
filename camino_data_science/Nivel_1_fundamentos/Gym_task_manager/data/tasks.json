@@ -1,50 +1,8 @@
 [
     {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
-        "complete": false
-    },
-    {
-        "name": "Cuadri",
-        "priority": 4,
-        "tag": "Pierna",
+        "name": "Aprender POO",
+        "priority": 3,
+        "tag": "Programar",
         "complete": false
     }
 ]

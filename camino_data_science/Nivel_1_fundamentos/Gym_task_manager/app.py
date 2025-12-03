@@ -8,6 +8,7 @@ manager = task_manager(FILE_PATH)
 def main():
 
     while(True):
+
         selection = input("""
               Bievenido al organizador de Tareas. Escribe el numero de las siguientes opciones a la que 
               desees acceder:
@@ -21,7 +22,28 @@ def main():
         match selection:
             case "1":
                 #Agregar tarea
-                pass
+                print("Agreguemos una tarea")
+                name = input("Tarea que quieres desempeñar: ")
+                tag = input("Grupo en el que quiere que la tara se ubique: ")
+
+                while True: 
+                    priority = input("La prioridad de tu tarea( 1- 5): ")
+                    try: 
+                        priority = int(priority)
+                        if 1<= priority <= 5: 
+                            break
+                        else:
+                            print("Favor de escoger un valor de 1 - 5 ")                
+                    except ValueError:
+                        #Manejo del error
+                        print("Favor de poner un valor entero numérico del 1-5")
+
+                #Creando la nueva tarea
+                new_task = task(name, priority,tag)
+                manager.add_task(new_task)
+                print(f'Tarea {name} guardada')
+                print("-------Tarea completada con éxito-------")
+                
             case "2":
                 #Listar tareas 
                 print("---------Tareas listadas ----------")

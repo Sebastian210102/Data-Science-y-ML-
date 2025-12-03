@@ -59,17 +59,18 @@ class task_manager:
 
 #Prueba de como se usa
 
-manager = task_manager(FILE_PATH)
-t1 = task("Cuadri", 4, "Pierna")
 
-# 1. Añadir la tarea a la lista en memoria
-manager.add_task(t1) 
+# manager = task_manager(FILE_PATH)
+# t1 = task("Cuadri", 4, "Pierna")
 
-# # 2. Guardar la lista interna (Crea tasks.json)
-manager.save_tasks() 
+# # 1. Añadir la tarea a la lista en memoria
+# manager.add_task(t1) 
 
-# # 3. Prueba de Deserialización: Crea una NUEVA instancia
-# manager_nuevo = task_manager(FILE_PATH)
+# # # 2. Guardar la lista interna (Crea tasks.json)
+# manager.save_tasks() 
 
-# 4. Verificar que se cargó:
-print(f"Cargadas {len(manager.tasks)} tareas. Tarea 1: {manager.tasks[0]}")
+# # # 3. Prueba de Deserialización: Crea una NUEVA instancia
+# # manager_nuevo = task_manager(FILE_PATH)
+
+# # 4. Verificar que se cargó:
+# print(f"Cargadas {len(manager.tasks)} tareas. Tarea 1: {manager.tasks[0]}")
