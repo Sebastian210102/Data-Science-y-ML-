@@ -4,6 +4,17 @@ from task_manager import task_manager
 FILE_PATH = "./data/tasks.json"
 
 manager = task_manager(FILE_PATH)
+def listado_tareas():
+    print("---------Tareas listadas ----------")
+    if manager.tasks:
+        for idx, task_obj in enumerate(manager.tasks):
+            print(f"{idx + 1}.- {task_obj}")                
+    else:
+            print("No hay tareas guardadas ¡Añande una!")
+
+
+
+
 
 def main():
 
@@ -46,15 +57,33 @@ def main():
                 
             case "2":
                 #Listar tareas 
-                print("---------Tareas listadas ----------")
-                if manager.tasks:
-                  for idx, task_obj in enumerate(manager.tasks):
-                        print(f"{idx + 1}.- {task_obj}")                
-                else:
-                     print("No hay tareas guardadas ¡Añande una!")
+               listado_tareas()
             case "3":
                 #Marcar como completada
-                pass
+                listado_tareas()                
+
+                while manager.tasks:    
+                    try:
+                        index_completed = input("¿Que tarea (indice) desea completar?")
+                        index_completed = int(index_completed)
+
+                        if index_completed == 0:
+                            break
+
+                        index_para_completar = index_completed - 1
+
+                        task_to_complete = manager.tasks[index_para_completar]
+                        task_to_complete.mark_as_completed()
+                        print(f"""
+                                Tarea '{task_to_complete.name}' marcada como completada 
+                                """)
+                        break
+                    except ValueError:
+                        print("Entrada no valida favor de introducir un numeor entero")
+                    except IndexError:
+                        print("Númeor de tarea invalido  favor de poner un número de la lista de tareas")
+
+
             case "4":
                 manager.save_tasks()
                 print("Tareas guardadas")
@@ -65,3 +94,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
